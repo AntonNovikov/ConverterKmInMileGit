@@ -6,5 +6,19 @@ allInput.forEach(function (input) {
   input.addEventListener("input", function (e) {
     let number = parseInt(e.target.value);
     let inputName = e.target.name;
+
+    if (e.target.value == "") {
+      kmInput.value = null;
+      mileInput.value = null;
+      return;
+    }
+
+    if (inputName === "km") {
+      let milesValue = number / 1.609344;
+      mileInput.value = milesValue.toFixed(5);
+    } else {
+      let kmValue = number * 1.609344;
+      kmInput.value = kmValue.toFixed(5);
+    }
   });
 });

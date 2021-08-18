@@ -15,12 +15,12 @@ allInput.forEach(function (input) {
     }
 
     if (inputName === "km") {
-    //   let milesValue = number / 1.609344;
-      let milesValue = floatNumber/ 1.609344;
+      //   let milesValue = number / 1.609344;
+      let milesValue = floatNumber / 1.609344;
       mileInput.value = milesValue.toFixed(5);
     } else {
-    //   let kmValue = number * 1.609344;
-      let kmValue = floatNumber* 1.609344;
+      //   let kmValue = number * 1.609344;
+      let kmValue = floatNumber * 1.609344;
       kmInput.value = kmValue.toFixed(5);
     }
   });
